@@ -41,6 +41,21 @@ header {
     font-size: 1.1rem; /* Increased font size */
 }
 
+/*contact Info Styles */
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; /* Align items to the end (right) */
+}
+
+.contact-info a[href^="tel"] {
+    font-size: 1.5rem; /* Increased font size */
+    color: black; /* Changed color to black */
+    text-decoration: none; /* Removed underline */
+    font-weight: bold;
+    margin-bottom: 0.5rem; /* Spacing between number and button */
+}
+
 /* Button Styles */
 
 .schedule-btn {
