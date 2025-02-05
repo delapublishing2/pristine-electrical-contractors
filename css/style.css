@@ -49,7 +49,7 @@ header {
 }
 
 .contact-info a[href^="tel"] {
-    font-size: 1.5rem; /* Increased font size */
+    font-size: 2rem; /* Increased font size */
     color: black; /* Changed color to black */
     text-decoration: none; /* Removed underline */
     font-weight: bold;
@@ -69,18 +69,83 @@ header {
 
 /* Hero Section Styles */
 .hero-section {
-    padding: 4rem 2rem;
-    text-align: center;
+    padding: 6rem 2rem;
+    text-align: left;
+    display: flex; /* Keep flexbox for overall layout */
+    align-items: center;
+    gap: 2rem;
+    /* Background Image Implementation */
+    background-image: url('../images/placeholder-1.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    position: relative;
+    color: white;
 }
 
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    z-index: 1;
+}
+
+
+.hero-content {
+    background-color: #384b68;
+    color: white;
+    padding: 2rem;
+    border-radius: 10px;
+    margin-right: 0;
+    flex: 1;
+    position: relative;
+    z-index: 2;
+    max-width: 50%; /* Limit max-width to create whitespace on right */ /* ADDED THIS LINE */
+}
+
+
 .hero-section h1 {
-    font-size: 2.5rem;
+    font-size: 3rem;
     margin-bottom: 1rem;
+    font-weight: 300;
+    font-family: 'Roboto', sans-serif;
 }
 
 .hero-section p {
-    max-width: 700px;
-    margin: 0 auto;
+    font-size: 1.5rem;
+    margin: 0;
+    color: inherit;
+    font-weight: normal;
+    line-height: 1.6;
+}
+
+.hero-section .schedule-btn,
+.hero-section .call-btn {
+    display: inline-block;
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    background: linear-gradient(to right, #a9cbe8, #9ccef5);
+    margin-top: 1rem;
+    margin-right: 10px;
+    position: relative;
+    z-index: 2;
+}
+
+.hero-section .call-btn {
+    background:  linear-gradient(to right, #ffed59, #FF914D);
+}
+
+.hero-image {
+    display: none; /* Hide hero-image as it's now background */
 }
 
 /* Image Grid Styles */
