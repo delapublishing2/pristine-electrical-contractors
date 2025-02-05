@@ -72,7 +72,8 @@ header {
     padding: 6rem 2rem;
     text-align: left;
     display: flex; /* Keep flexbox for overall layout */
-    align-items: center;
+    flex-direction: column; /* Stack content and buttons vertically */ /* ADDED THIS LINE */
+    align-items: flex-start; /* Align items to the start (left) */ /* CHANGED THIS LINE */
     gap: 2rem;
     /* Background Image Implementation */
     background-image: url('../images/placeholder-1.jpg');
@@ -125,8 +126,12 @@ header {
     line-height: 1.6;
 }
 
-.hero-section .schedule-btn,
-.hero-section .call-btn {
+/* Hero Buttons Styles - Moved outside hero-content */
+.hero-buttons {
+    margin-top: 0.5rem; /* Add margin above buttons to separate from text */ /* ADDED THIS LINE */
+}
+
+.hero-buttons a { /* Style for buttons in hero section */ /* UPDATED SELECTOR */
     display: inline-block;
     padding: 1rem 2rem;
     border-radius: 5px;
@@ -134,7 +139,6 @@ header {
     color: #333;
     font-weight: bold;
     background: linear-gradient(to right, #a9cbe8, #9ccef5);
-    margin-top: 1rem;
     margin-right: 10px;
     position: relative;
     z-index: 2;
