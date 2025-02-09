@@ -306,6 +306,146 @@ header {
 
 /* Why You Should Entrust Us With Your Home or Business Section Styles End */
 
+/* Efficient & Reliable Service Section Styles */
+.efficient-reliable-section {
+    background: #384B68; /* Solid dark blue background color */
+    padding: 4rem 2rem;
+    text-align: center; /* Center content in section */
+    color: white; /* Default text color to white */
+}
+
+.efficient-reliable-section h2 {
+    font-size: 2.5rem; /* Section heading size */
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.efficient-reliable-section .underline { /* Reusing underline class for yellow line */
+    height: 3px;
+    background-color:  #ffed59; /* Yellow underline color */
+    width: 50px;
+    margin: 1rem auto 2rem auto;
+}
+
+.efficient-reliable-section p {
+    max-width: 800px; /* Limit paragraph width */
+    margin: 0 auto 2rem auto;
+    line-height: 1.7; /* Increased line height for readability */
+    font-size: 1.1rem;
+}
+
+
+.service-list {
+    list-style-type: disc; /* Use disc bullet points */
+    padding-left: 2rem; /* Indent list items */
+    max-width: 800px; /* Limit list width */
+    margin: 0 auto 2rem auto; /* Center list and add spacing */
+    text-align: left; /* Left align list text */
+}
+
+.service-list li {
+    margin-bottom: 0.5rem; /* Spacing between list items */
+    color: white; /* White list text color */
+}
+
+.and-much-more {
+    font-size: 0.5rem; /* Slightly larger than list */
+    font-weight: bold;
+    color: #a9cbe8; /* Light blue "And Much More" text color */
+    margin-bottom: 2rem; /* Spacing below "And Much More" */
+}
+
+
+.efficient-reliable-section .hero-buttons { /* Center buttons in this section */ /* NEW SELECTOR FOR THIS SECTION'S BUTTONS */
+    text-align: center; /* Center buttons */
+    margin-top: 2rem; /* Spacing above buttons */
+}
+
+/* Efficient & Reliable Service Section Styles End */
+
+/* Residential Services Section Styles */
+.residential-services-section {
+    padding: 4rem 4rem; /* Add padding to the section */
+    background-color: #384B68; /* Dark blue background for the section */
+    text-align: center; /* Center align content within the section */
+    color: white; /* Default text color to white */
+}
+
+.residential-services-section h2 {
+    font-size: 2.5rem; /* Section heading size */
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.residential-services-section .underline { /* Reusing underline class for yellow line */
+    height: 3px;
+    background-color:  #9CCEF5; /* Light blue underline color */
+    width: 50px;
+    margin: 1rem auto 2rem auto;
+}
+
+.residential-services-section .feature-cards-grid { /* Ensure 2x2 grid layout */ /* UPDATED GRID PROPERTIES */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Force 2 columns, each taking equal fraction of space */ /* UPDATED THIS LINE */
+    grid-template-rows: auto auto; /*  Explicitly define two rows, auto height */ /* ADDED THIS LINE */
+    justify-content: center;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto 2rem auto;
+}
+
+
+.feature-card {
+    background: linear-gradient(to bottom, #a9cbe8, #384b68);
+    color: white;
+    padding: 4rem; /* Reduced padding for landscape */ /* ADJUSTED PADDING */
+    border-radius: 10px;
+    text-align: left; /* Left align text within cards */
+    display: flex; /* Enable flexbox for card content layout */
+    flex-direction: row; /* Arrange icon and text horizontally */ /* ADDED THIS LINE */
+    align-items: center; /* Vertically align icon and text */
+    gap: 1rem; /* Spacing between icon and text */
+    min-width: 0; /* Allow cards to shrink if needed */ /* ADDED THIS LINE */
+}
+
+
+.feature-card img {
+    max-width: 1000px; /* Increased icon width for landscape */ /* ADJUSTED ICON SIZE */
+    max-height: 1000px; /* Limit icon height */ /* ADDED MAX-HEIGHT */
+    width: 30%; /* Take up 30% of card width */ /* ADDED WIDTH */
+    height: auto;
+    margin-bottom: 0; /* Reset bottom margin */
+    margin-right: 1rem; /* Add right margin to separate from text */ /* ADDED RIGHT MARGIN */
+    flex-shrink: 0; /* Prevent icon from shrinking */ /* ADDED FLEX-SHRINK */
+}
+
+
+.feature-card h3 {
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin-bottom: 0.2rem;
+    color: white;
+    flex: 1;
+     /* removed overflow lap and word break */
+}
+
+.feature-card p {
+    font-size: 1rem;
+    line-height: 1.4;
+    margin: 0;
+    color: white; 
+    /* removed overflow lap and word break */
+}
+
+.residential-services-section .hero-buttons { /* Center buttons in this section */ /* NEW SELECTOR FOR THIS SECTION'S BUTTONS */
+    text-align: center; /* Center buttons */
+    margin-top: 2rem; /* Spacing above buttons */
+}
+
+
+/* Residential Services Section Styles End */
+
+
 /* Image Grid Styles */
 .image-grid {
     display: grid;
