@@ -139,7 +139,7 @@ header {
     padding: 1rem 2rem;
     border-radius: 5px;
     text-decoration: none;
-    color: #333;
+    color: white;
     font-weight: bold;
     background: linear-gradient(to right, #a9cbe8, #9ccef5);
     margin-right: 10px;
@@ -364,7 +364,6 @@ header {
 /* Efficient & Reliable Service Section Styles End */
 
 /* Residential Services Section Styles */
-
 .residential-services-section {
     background-color: #384B68; /* Dark blue background */
     padding: 4rem 2rem; /* Top and bottom padding */
@@ -374,20 +373,20 @@ header {
     color: white; /* Set default text color to white */
 }
 
-.section-title {
+.residential-services-section .section-title {
     font-size: 2rem;
     margin-bottom: 2rem;
     color: #fff; /* White color for the title */
 }
 
-.feature-cards-grid {
+.residential-services-section .feature-cards-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr); /* 2x2 grid */
     gap: 2rem;
     margin-bottom: 2rem;
 }
 
-.service-card {
+.residential-services-section .service-card {
     background-color: #EBF2FA; /* Light blue card background */
     border-radius: 10px;
     padding: 1.5rem;
@@ -398,32 +397,32 @@ header {
     z-index: 1; /* Ensure cards are above wave */
 }
 
-.service-card:hover {
+.residential-services-section .service-card:hover {
     transform: translateY(-5px);
 }
 
-.service-card-image {
+.residential-services-section .service-card-image {
     width: 100px;
     margin-bottom: 1rem;
 }
 
-.service-card-image img {
+.residential-services-section .service-card-image img {
     max-width: 100%;
     height: auto;
     border-radius: 5px;
 }
 
-.service-card h3 {
+.residential-services-section .service-card h3 {
     font-size: 1.5rem;
     font-weight: bold;
     margin-bottom: 0;
 }
 
-.hero-buttons {
+.residential-services-section .hero-buttons {
     text-align: center; /* Center buttons */
 }
 
-.hero-buttons a {
+.residential-services-section .hero-buttons a {
     display: inline-block;
     padding: 1rem 2rem;
     border-radius: 5px;
@@ -433,17 +432,9 @@ header {
     margin: 0 1rem;
 }
 
-.call-btn {
-    background-color: gray; /* Grey background */
-}
 
-.schedule-btn {
-    background-color: #FF914D; /* Orange background */
-}
 
 /* Wave Styles (Same as before) */
-
-
 .residential-services-section::after {
     content: '';
     position: absolute;
@@ -456,78 +447,65 @@ header {
     opacity: 0.3; /* Make the wave very subtle */
 }
 
-/* Media Query for Responsiveness */
-@media (max-width: 768px) {
-    .feature-cards-grid {
-        grid-template-columns: 1fr; /* Single column on smaller screens */
-    }
+/* Our Projects Section Styles */
+
+.project-item video {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 0.5rem;
 }
 
-@media (max-width: 534px) { /* Or whatever breakpoint you're using */
-    .hero-buttons a {
-        margin-top: 10px; /* Add some space between stacked buttons */
-        margin-bottom: 10px; /* Add some space between stacked buttons */
-        display: block; /* Make them stack */
-        width: 100%; /* Make them full width */
-        margin-left: 0; /* Remove left margin */
-        margin-right: 0; /* Remove right margin */
-    }
-}
-
-/* Residential Services Section Styles End */
-
-/* Our Projects Styles Start */
 .our-projects-section {
     padding: 4rem 2rem;
     text-align: center;
 }
 
-.section-title {
+.our-projects-section .section-title {
     font-size: 2.5rem;
     margin-bottom: 1rem;
     color: #384B68; /* Dark blue */
 }
 
-.underline {
+.our-projects-section .underline {
     width: 50px; /* Adjust width as needed */
     height: 3px;
     background-color: #FFC107; /* Yellow */
     margin: 0.5rem auto 1rem; /* Center the line */
 }
 
-.section-subtitle {
+.our-projects-section .section-subtitle {
     font-size: 1.2rem;
     margin-bottom: 2rem;
     color: #384B68; /* Dark blue */
 }
 
-.projects-grid {
+.our-projects-section .projects-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
     gap: 2rem;
     margin-bottom: 2rem;
 }
 
-.project-item {
+.our-projects-section .project-item {
     text-align: center;
 }
 
-.project-item img {
+.our-projects-section .project-item img {
     width: 100%;
     border-radius: 10px;
     margin-bottom: 0.5rem;
 }
 
-.project-item p {
+.our-projects-section .project-item p {
     font-size: 1rem;
     color: #555;
 }
 
-.hero-buttons {
+.our-projects-section .hero-buttons {
     text-align: center;
 }
 
-.hero-buttons a {
+.our-projects-section .hero-buttons a {
     display: inline-block;
     padding: 1rem 2rem;
     border-radius: 5px;
@@ -537,15 +515,7 @@ header {
     margin: 0 1rem;
 }
 
-.call-btn {
-    background-color: gray;
-}
 
-.schedule-btn {
-    background-color: #FF914D;
-}
-
-/* Our Projects Section Styles End*/
 
 /* Image Grid Styles */
 .image-grid {
