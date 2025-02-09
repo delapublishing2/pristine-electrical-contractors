@@ -476,9 +476,76 @@ header {
 
 /* Residential Services Section Styles End */
 
-/* Our Services Styles Start */
+/* Our Projects Styles Start */
+.our-projects-section {
+    padding: 4rem 2rem;
+    text-align: center;
+}
 
-/* Our Services Section Styles End*/
+.section-title {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #384B68; /* Dark blue */
+}
+
+.underline {
+    width: 50px; /* Adjust width as needed */
+    height: 3px;
+    background-color: #FFC107; /* Yellow */
+    margin: 0.5rem auto 1rem; /* Center the line */
+}
+
+.section-subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    color: #384B68; /* Dark blue */
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.project-item {
+    text-align: center;
+}
+
+.project-item img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 0.5rem;
+}
+
+.project-item p {
+    font-size: 1rem;
+    color: #555;
+}
+
+.hero-buttons {
+    text-align: center;
+}
+
+.hero-buttons a {
+    display: inline-block;
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    margin: 0 1rem;
+}
+
+.call-btn {
+    background-color: gray;
+}
+
+.schedule-btn {
+    background-color: #FF914D;
+}
+
+/* Our Projects Section Styles End*/
 
 /* Image Grid Styles */
 .image-grid {
