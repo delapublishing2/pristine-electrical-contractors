@@ -535,25 +535,33 @@ header {
 /* Need More Information Section Styles */
 .need-more-info-section {
     padding: 4rem 2rem;
-    text-align: center;
 }
 
 .need-more-info-section .container {
-    max-width: 800px;
+    max-width: 1200px;
     margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.need-more-info-section .text-content {
+    flex: 1;
+    padding-right: 2rem;
 }
 
 .need-more-info-section h2 {
     font-size: 2.5rem;
     margin-bottom: 1rem;
     color: #384B68;
+    text-align: left;
 }
 
 .need-more-info-section .underline {
     width: 50px;
     height: 3px;
     background-color: #FFC107;
-    margin: 0.5rem auto 1rem;
+    margin: 0.5rem 0 1rem 0;
 }
 
 .need-more-info-section p {
@@ -561,10 +569,11 @@ header {
     color: #555;
     line-height: 1.7;
     margin-bottom: 2rem;
+    text-align: left;
 }
 
 .need-more-info-section .hero-buttons {
-    text-align: center;
+    text-align: left;
 }
 
 .need-more-info-section .hero-buttons a {
@@ -577,8 +586,31 @@ header {
     margin: 0 1rem;
 }
 
-.need-more-info-section img {
+.need-more-info-section .image-content {
+    flex: 1;
+}
+
+.need-more-info-section .image-content img {
     max-width: 100%;
     height: auto;
     border-radius: 10px;
+}
+
+/* Media Query for Responsiveness */
+@media (max-width: 768px) {
+    .need-more-info-section .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .need-more-info-section .text-content {
+        padding-right: 0;
+        margin-bottom: 2rem;
+    }
+
+    .need-more-info-section h2,
+    .need-more-info-section p,
+    .need-more-info-section .hero-buttons {
+        text-align: center;
+    }
 }

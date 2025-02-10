@@ -589,3 +589,53 @@ header {
     margin: 0 1rem;
 }
 
+/* Need More Information Section Styles */
+.need-more-info-section {
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+.need-more-info-section .container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.need-more-info-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #384B68;
+}
+
+.need-more-info-section .underline {
+    width: 50px;
+    height: 3px;
+    background-color: #FFC107;
+    margin: 0.5rem auto 1rem;
+}
+
+.need-more-info-section p {
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.7;
+    margin-bottom: 2rem;
+}
+
+.need-more-info-section .hero-buttons {
+    text-align: center;
+}
+
+.need-more-info-section .hero-buttons a {
+    display: inline-block;
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    margin: 0 1rem;
+}
+
+.need-more-info-section img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
