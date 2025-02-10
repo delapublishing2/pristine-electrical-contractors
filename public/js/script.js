@@ -1,6 +1,5 @@
-
 $(document).ready(function(){
-    $('project-gallery-section').slick({
+    $('.project-gallery-slider').slick({
         slidesToShow: 1,
         slidesToScroll: 1,
         dots: true,
@@ -14,7 +13,7 @@ $(document).ready(function(){
             {
               breakpoint: 768,
               settings: {
-                arrows: false,
+                arrows: true,
                 dots: true
               }
             }
