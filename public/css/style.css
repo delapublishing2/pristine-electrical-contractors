@@ -533,9 +533,23 @@ header {
 }
 
 /* Slick Styles */
+
+.slick-prev, .slick-next {
+    background: rgba(0, 0, 0, 0.5); /* Add background color for better visibility */
+    border-radius: 50%; /* Add border radius */
+    width: 40px; /* Set width */
+    height: 40px; /* Set height */
+    z-index: 2; /* Ensure arrows are above other elements */
+    color: black;
+}
+.slick-prev:before, .slick-next:before {
+    color: black; /* Set arrow color */
+    font-size: 20px; /* Set arrow size */
+}
 .project-gallery-section {
     padding: 4rem 2rem;
     text-align: center;
+    margin: 0 auto;
 }
 
 .section-title {
@@ -552,7 +566,8 @@ header {
 }
 
 .project-gallery-slider {
-    margin-bottom: 2rem;
+    margin: 0 auto; /* Center the slider */
+    max-width: 600px; /* Adjust the width as needed */
 }
 
 .project-gallery-slider img {
@@ -574,10 +589,3 @@ header {
     margin: 0 1rem;
 }
 
-.call-btn {
-    background-color: gray;
-}
-
-.schedule-btn {
-    background-color: #FF914D;
-}
