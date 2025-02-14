@@ -1,0 +1,25 @@
+C. Detailed Style Guide:
+
+Action: We will define the following:
+
+Fonts: We will use Roboto for all text on our website (as seen in our previous project)
+
+Color Palette: We will use the colors you provided earlier: #384B68, #79A2D1, #9ccef5 and #ffed59 - #FF914D.
+
+The dark blues will be for headers, and dark text.
+
+The light blues will be used for background and cards.
+
+The orange gradients will be for call to action buttons.
+
+The whites will be for text on dark background.
+
+Spacing Guidelines: We will use:
+
+1rem for base padding
+
+2rem for larger padding,
+
+5px to 20px for margins between images in the image grid
+
+Implementation: These will be used to ensure a more cohesive and consistent design.
