@@ -10,6 +10,14 @@ body {
     line-height: 1.6;
 }
 
+/* Global Styles */
+
+h1 h2 h3 h4 h5 h6 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    max-width: 800px;
+}
+
 /* Main Header Styles */
 header {
     background-color: white; /* Changed to white to match design */
@@ -25,6 +33,7 @@ header {
     font-size: 2.2rem; /* Increased font size */
     font-weight: bold;
 }
+
 .nav-menu {
     list-style: none;
     display: flex;
@@ -114,8 +123,9 @@ header {
 .hero-section h1 {
     font-size: 3rem;
     margin-bottom: 1rem;
-    font-weight: 300;
+    font-weight: 600;
     font-family: 'Roboto', sans-serif;
+    color: #9ccef5; /* Light blue heading color */
 }
 
 .hero-section p {
@@ -154,6 +164,13 @@ header {
 .hero-image {
     display: none; /* Hide hero-image as it's now background */
 }
+
+.hero-section .underline {
+    width: 50px;
+    height: 3px;
+    background-color: #fff; /* Yellow underline color */
+    margin: 0.5rem 0 1rem 0; /* Spacing around underline */
+}   
 /*Hero Section Styles End */
 
 /* Why Choose Us Section Styles */
@@ -241,6 +258,8 @@ header {
     font-weight: bold;
     margin-bottom: 1rem;
     color: #384B68; /* Dark blue heading color */
+    max-width: 800px;
+    margin: auto;
 }
 
 .why-entrust-us-section .underline { /* Reusing underline class for yellow line */
@@ -314,6 +333,14 @@ header {
     color: white; /* Default text color to white */
 }
 
+.efficient-reliable-section h1 {
+    font-size: 3rem; /* Section heading size */
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color:#9ccef5; /* Light blue heading color */
+    max-width: 800px;
+    margin: auto;
+}
 .efficient-reliable-section h2 {
     font-size: 2.5rem; /* Section heading size */
     font-weight: bold;
@@ -322,7 +349,7 @@ header {
 
 .efficient-reliable-section .underline { /* Reusing underline class for yellow line */
     height: 3px;
-    background-color:  #ffed59; /* Yellow underline color */
+    background-color: #EBF2FA; /* Yellow underline color */
     width: 50px;
     margin: 1rem auto 2rem auto;
 }
@@ -375,7 +402,7 @@ header {
 
 .residential-services-section .section-title {
     font-size: 2rem;
-    margin-bottom: 2rem;
+    margin-bottom: 4rem;
     color: #fff; /* White color for the title */
 }
 
@@ -384,6 +411,7 @@ header {
     grid-template-columns: repeat(2, 1fr); /* 2x2 grid */
     gap: 2rem;
     margin-bottom: 2rem;
+    
 }
 
 .residential-services-section .service-card {
@@ -395,6 +423,9 @@ header {
     transition: transform 0.3s ease;
     color: #333; /* Set the text color for service cards */
     z-index: 1; /* Ensure cards are above wave */
+    margin-left: 2rem;
+    margin-right: 2rem;
+    max-width: 500px;
 }
 
 .residential-services-section .service-card:hover {
@@ -770,6 +801,16 @@ header {
     }
 }
 
+/* Why Us Section Styles Start */
+
+.why-us-hero .underline {
+    width: 50px;
+    height: 3px;
+    background-color: #fff;
+    margin: 0.5rem 0 1rem 0; /* Remove auto to align left */
+}
+
+/* Why Us Section Styles End*/
 /* Footer Styles */
 
 .footer-section {
@@ -882,3 +923,164 @@ header {
         margin-bottom: 2rem;
     }
 }
+
+/* Contact Us Section Styles */
+.contact-us-section {
+    padding: 4rem 2rem;
+    background-color: white;
+}
+
+.contact-us-section .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.contact-us-section .form-content {
+    flex: 1;
+    padding-right: 2rem;
+}
+
+.contact-us-section h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #384B68;
+    text-align: left;
+}
+
+.contact-us-section .underline {
+    width: 50px;
+    height: 3px;
+    background-color: #FFC107;
+    margin: 0.5rem 0 1rem 0;
+}
+
+.contact-us-section p {
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.7;
+    margin-bottom: 2rem;
+    text-align: left;
+}
+
+.contact-us-section .form-group {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.contact-us-section .form-group input,
+.contact-us-section .form-group select,
+.contact-us-section .form-group textarea {
+    flex: 1;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.contact-us-section .form-group textarea {
+    height: 150px;
+    resize: vertical;
+}
+
+.contact-us-section .submit-btn {
+    display: inline-block;
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    background: linear-gradient(to right, #ffed59, #FF914D);
+    border: none;
+    cursor: pointer;
+}
+
+.contact-us-section .contact-info {
+    flex: 1;
+    padding-left: 2rem;
+}
+
+.contact-us-section .contact-info h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #384B68;
+}
+
+.contact-us-section .contact-info p {
+    font-size: 1.5rem;
+    color: #555;
+    margin-bottom: 1rem;
+}
+
+.contact-us-section .contact-info a {
+    color: #384B68;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.contact-us-section .map {
+    margin-top: 2rem;
+}
+
+.contact-us-section .map iframe {
+    border: 0;
+    border-radius: 10px;
+}
+
+/* Media Query for Responsiveness */
+@media (max-width: 768px) {
+    .contact-us-section .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .contact-us-section .form-content {
+        padding-right: 0;
+        margin-bottom: 2rem;
+    }
+
+    .contact-us-section .contact-info {
+        padding-left: 0;
+    }
+
+    .contact-us-section h1,
+    .contact-us-section p,
+    .contact-us-section .contact-info h2,
+    .contact-us-section .contact-info p {
+        text-align: center;
+    }
+}
+
+.efficient-reliable-section.signs-to-call-section h2 {
+    font-size: 2rem;
+    max-width: 800px;
+    margin: auto;
+    margin-bottom: 2rem;
+}
+
+
+.efficient-reliable-section.signs-to-call-section h1 {
+    font-size: 2.5rem;
+    margin: auto;
+    max-width: 800px;
+    margin-bottom: 1rem;
+}
+.efficient-reliable-section.signs-to-call-section p {
+    font-size: 2rem;
+    max-width: 800px;
+    margin: auto;
+    margin-bottom: 1rem;
+}
+
+.efficient-reliable-section.signs-to-call-section ul li {
+    font-size: 1rem;
+    max-width: 800px;
+    margin: auto;
+    margin-bottom: 2rem;
+
+}
+
+
