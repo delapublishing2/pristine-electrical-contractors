@@ -76,6 +76,50 @@ header {
     font-weight: bold;
 }
 
+/* Media Query for Responsiveness */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1rem 1rem;
+    }
+
+    .logo-container {
+        font-size: 1.8rem; /* Adjust font size for smaller screens */
+        margin-bottom: 1rem; /* Add margin below logo */
+    }
+
+    .nav-menu {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+    }
+
+    .nav-menu li {
+        margin-left: 0;
+        margin-bottom: 1rem; /* Add margin below each menu item */
+    }
+
+    .nav-menu a {
+        font-size: 1rem; /* Adjust font size for smaller screens */
+    }
+
+    .contact-info {
+        align-items: flex-start; /* Align items to the start (left) */
+        width: 100%;
+    }
+
+    .contact-info a[href^="tel"] {
+        font-size: 1.5rem; /* Adjust font size for smaller screens */
+    }
+
+    .schedule-btn {
+        width: 100%; /* Make button full width */
+        text-align: center; /* Center text within button */
+        margin-top: 1rem; /* Add margin above button */
+    }
+}
+
 /* Hero Section Styles */
 .hero-section {
     padding: 6rem 2rem;
@@ -1081,6 +1125,40 @@ header {
     margin: auto;
     margin-bottom: 2rem;
 
+}
+
+/* Responsive Image Styles */
+.responsive-img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Responsive Video Styles */
+video {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Map Styles */
+.map iframe {
+    border: 0;
+    border-radius: 10px;
+}
+
+/* Media Query for Responsiveness */
+@media (max-width: 768px) {
+    .responsive-img,
+    video {
+        width: 100%;
+        height: auto;
+    }
+
+    .map iframe {
+        width: 100%;
+        height: 300px; /* Adjust height for smaller screens */
+    }
 }
 
 

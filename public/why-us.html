@@ -50,7 +50,7 @@
 <!-- Why Choose Us Section Start -->
 <section class="why-choose-us-section">
     <div class="section-image">
-        <img src="images/placeholder-1.jpg" alt="Placeholder Image">
+        <img src="images/placeholder-1.jpg" alt="Placeholder Image" loading="lazy" class="responsive-img">
     </div>
     <div class="section-text-content">
         <h2>Ensuring Safety, Reliability and Effeciency for your Electrical Needs</h2>
@@ -65,49 +65,60 @@
 </section>
 <!-- Why Choose Us Section End -->
 
- <!-- Our Projects Start -->
+    <!-- Our Projects Start -->
 
- <section class="our-projects-section">
-    <h2 class="section-title">Our Projects</h2>
-    <div class="underline"></div>
-    <h3 class="section-subtitle">Here is a Visual of our Pristine Service</h3>
-    <div class="projects-grid">
-        <div class="project-item">
+    <section class="our-projects-section">
+        <h2 class="section-title">Our Projects</h2>
+        <div class="underline"></div>
+        <h3 class="section-subtitle">Here is a Visual of our Pristine Service</h3>
+        <div class="projects-grid">
             <div class="project-item">
-                <video src="path/to/project1.mp4" alt="Project 1 Description" controls></video>
+                <div class="project-item">
+                    <video controls width="100%" height="auto" preload="metadata">
+                        <source src="videos/sample-video.mp4" type="video/mp4" alt="Project Video 1">
+                        <track src="videos/sample-video.vtt" kind="captions" srclang="en" label="English">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <p>Project 1 Caption: Brief description of the project.</p>
+            </div>
+            <div class="project-item">
+                <div class="project-item">
+                    <video controls width="100%" height="auto" preload="metadata">
+                        <source src="videos/sample-video.mp4" type="video/mp4" alt="Project Video 1">
+                        <track src="videos/sample-video.vtt" kind="captions" srclang="en" label="English">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <p>Project 2 Caption: Brief description of the project.</p>
+            </div>
+            <div class="project-item">
+                <div class="project-item">
+                    <video controls width="100%" height="auto" preload="metadata">
+                        <source src="videos/sample-video.mp4" type="video/mp4" alt="Project Video 1">
+                        <track src="videos/sample-video.vtt" kind="captions" srclang="en" label="English">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <p>Project 3 Caption: Brief description of the project.</p>
+            </div>
+        </div>
+        <div class="hero-buttons">
+            <a href="tel:404-939-0629" class="call-btn">CALL NOW</a>
+            <a href="contact-us.html" class="schedule-btn">SCHEDULE NOW</a>
+        </div>
+    </section>
 
-            </div>
-            <p>Project 1 Caption: Brief description of the project.</p>
-        </div>
-        <div class="project-item">
-            <div class="project-item">
-                <video src="path/to/project1.mp4" alt="Project 1 Description" controls></video>
-            </div>
-            <p>Project 2 Caption: Brief description of the project.</p>
-        </div>
-        <div class="project-item">
-            <div class="project-item">
-                <video src="path/to/project1.mp4" alt="Project 1 Description" controls></video>
-            </div>
-            <p>Project 3 Caption: Brief description of the project.</p>
-        </div>
-    </div>
-    <div class="hero-buttons">
-        <a href="tel:404-939-0629" class="call-btn">CALL NOW</a>
-        <a href="contact-us.html" class="schedule-btn">SCHEDULE NOW</a>
-    </div>
-</section>
-
-  <!-- Our Projects End -->
+      <!-- Our Projects End -->
 
   <!-- Project Gallery Section Start -->
   <section class="project-gallery-section">
     <h2 class="section-title">Project Gallery</h2>
     <div class="underline"></div>
     <div class="project-gallery-slider">
-        <div><img src="images/placeholder-1.jpg" alt="Image 1"></div>
-        <div><img src="images/placeholder-1.jpg" alt="Image 2"></div>
-        <div><img src="images/placeholder-1.jpg" alt="Image 3"></div>
+        <div><img src="images/placeholder-1.jpg" alt="Image 1" loading="lazy" class="responsive-img"></div>
+        <div><img src="images/placeholder-1.jpg" alt="Image 2" loading="lazy" class="responsive-img"></div>
+        <div><img src="images/placeholder-1.jpg" alt="Image 3" loading="lazy" class="responsive-img"></div>
     </div>
     <div class="hero-buttons">
         <a href="tel:404-939-0629" class="call-btn">CALL NOW</a>
@@ -134,25 +145,25 @@
     <div class="feature-cards-grid">
         <div class="service-card">
             <div class="service-card-image">
-                <img src="/images/placeholder-1.jpg" alt="Emergency & Electrical Service">
+                <img src="/images/placeholder-1.jpg" alt="Emergency & Electrical Service" loading="lazy" class="responsive-img">
             </div>
             <h3>Timely</h3>
         </div>
         <div class="service-card">
             <div class="service-card-image">
-                <img src="/images/placeholder-1.jpg" alt="Home Wiring Installation & Care">
+                <img src="/images/placeholder-1.jpg" alt="Home Wiring Installation & Care" loading="lazy" class="responsive-img">
             </div>
             <h3>Ensured Safety</h3>
         </div>
         <div class="service-card">
             <div class="service-card-image">
-                <img src="/images/placeholder-1.jpg" alt="Clean Energy Installations">
+                <img src="/images/placeholder-1.jpg" alt="Clean Energy Installations" loading="lazy" class="responsive-img">
             </div>
             <h3>Reliable</h3>
         </div>
         <div class="service-card">
             <div class="service-card-image">
-                <img src="/images/placeholder-1.jpg" alt="Residential Upgrades & Renovations">
+                <img src="/images/placeholder-1.jpg" alt="Residential Upgrades & Renovations" loading="lazy" class="responsive-img">
             </div>
             <h3>Committed</h3>
         </div>
@@ -166,21 +177,22 @@
 </section>
 <!-- Why You Should Trust Us End -->
 
-    <!-- What Drives Us -->
+      <!-- What Drives Us -->
 <section class="why-choose-us-section">
     <div class="section-text-content">
         <h2>What Drives Us & Why You
             Can Trust Pristine</h2>
         <div class="underline"></div> <!-- Yellow underline -->
-        <p>Having lit up the lights of hundreds of families and businesses from all over Georgia, we want to make sure you live with functioning lights and safe electricity in your home or business. We always get to the root of the problem, ensuring the perfect electrical solution for your needs.</p>
-        <p>This is not just fixing wires for us, this is having access to basic modern necessities.</p>
+        <p>From all over Georgia, we strive to make sure every home or business is safe, functional, and livable in the modern world. You shouldn't have to live in a home in the dark, a business without safety, and you deserve to enjoy your new house or business' modern luxuries.
+            That's why from lightbulbs to wires, we make it easier for you.</p>
+        <p>Don't hesitate. Call now to enjoy your home or business, whether old or new.</p>
         <div class="hero-buttons">  <!-- Reusing hero-buttons for consistent button styling -->
             <a href="tel:404-939-0629" class="call-btn">CALL NOW</a>
             <a href="contact-us.html" class="schedule-btn">SCHEDULE NOW</a>
         </div>
     </div>
     <div class="section-image">
-        <img src="images/placeholder-1.jpg" alt="Placeholder Image">
+        <img src="images/placeholder-1.jpg" alt="Placeholder Image" loading="lazy" class="responsive-img">
     </div>
 </section>
 <!-- What Drives Us End -->
@@ -188,7 +200,7 @@
 <section class="cta-section">
     <div class="container">
         <div class="image-content">
-            <img src="images/placeholder-1.jpg" alt="Placeholder Image">
+            <img src="images/placeholder-1.jpg" alt="Placeholder Image" loading="lazy" class="responsive-img">
         </div>
         <div class="text-content">
             <h2>Ready to Schedule a Visit?</h2>
@@ -212,7 +224,7 @@
         <div class="container">
             <div class="footer-column">
                 <div class="footer-logo">
-                    <img src="images/Pristine_Electricians.png" alt="Pristine Electrical Logo">
+                    <img src="images/Pristine_Electricians.png" alt="Pristine Electrical Logo" loading="lazy" class="responsive-img">
                 </div>
             </div>
             <div class="footer-column">

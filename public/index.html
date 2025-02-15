@@ -50,7 +50,8 @@
 <!-- Why Choose Us Section Start -->
 <section class="why-choose-us-section">
     <div class="section-image">
-        <img src="images/placeholder-1.jpg" alt="Placeholder Image">
+<!-- Example Image with Lazy Loading and Alt Text -->
+<img src="images/placeholder-1.jpg" alt="Placeholder Image" loading="lazy" class="responsive-img">
     </div>
     <div class="section-text-content">
         <h2>Home Owners, Businesses, We Get It.</h2>
@@ -72,17 +73,18 @@
             <p>At Pristine’s, we see wires differently. As professionally certified contractors, we see your trust in us as an invitation to give you:</p>
             <div class="feature-cards-container">
                 <div class="feature-card">
-                    <img src="images/placeholder-1.jpg" alt="Safety Icon"> <!-- Placeholder Icon -->
+<!-- Example Image with Lazy Loading and Alt Text -->
+<img src="images/placeholder-1.jpg" alt="Placeholder Image" loading="lazy" class="responsive-img">
                     <h3>Safety</h3>
                     <p>You’ll feel safe knowing your wires are all in place and up to code.</p>
                 </div>
                 <div class="feature-card">
-                    <img src="images/placeholder-1.jpg" alt="Functionality Icon"> <!-- Placeholder Icon -->
+                    <img src="images/placeholder-1.jpg" alt="Functionality Icon" loading="lazy" class="responsive-img">  <!-- Placeholder Icon -->
                     <h3>Functionality</h3>
                     <p>Your lights will finally work with no more hassle.</p>
                 </div>
                 <div class="feature-card">
-                    <img src="images/placeholder-1.jpg" alt="Modern Livability Icon"> <!-- Placeholder Icon -->
+                    <img src="images/placeholder-1.jpg" alt="Modern Livability Icon" loading="lazy" class="responsive-img"> <!-- Placeholder Icon -->
                     <h3>Modern Livability</h3>
                     <p>No living off the grid, have the basic technology of today.</p>
                 </div>
@@ -134,25 +136,25 @@
             <div class="feature-cards-grid">
                 <div class="service-card">
                     <div class="service-card-image">
-                        <img src="/images/placeholder-1.jpg" alt="Emergency & Electrical Service">
+                        <img src="/images/placeholder-1.jpg" alt="Emergency & Electrical Service" loading="lazy" class="responsive-img">
                     </div>
                     <h3>Emergency & Electrical Service</h3>
                 </div>
                 <div class="service-card">
                     <div class="service-card-image">
-                        <img src="/images/placeholder-1.jpg" alt="Home Wiring Installation & Care">
+                        <img src="/images/placeholder-1.jpg" alt="Home Wiring Installation & Care" loading="lazy" class="responsive-img">
                     </div>
                     <h3>Home Wiring Installation & Care</h3>
                 </div>
                 <div class="service-card">
                     <div class="service-card-image">
-                        <img src="/images/placeholder-1.jpg" alt="Clean Energy Installations">
+                        <img src="/images/placeholder-1.jpg" alt="Clean Energy Installations" loading="lazy" class="responsive-img">
                     </div>
                     <h3>Clean Energy Installations</h3>
                 </div>
                 <div class="service-card">
                     <div class="service-card-image">
-                        <img src="/images/placeholder-1.jpg" alt="Residential Upgrades & Renovations">
+                        <img src="/images/placeholder-1.jpg" alt="Residential Upgrades & Renovations"   loading="lazy" class="responsive-img">
                     </div>
                     <h3>Residential Upgrades & Renovations</h3>
                 </div>
@@ -172,25 +174,25 @@
             <div class="feature-cards-grid">
                 <div class="service-card">
                     <div class="service-card-image">
-                        <img src="/images/placeholder-1.jpg" alt="Emergency & Electrical Service">
+                        <img src="/images/placeholder-1.jpg" alt="Emergency & Electrical Service" loading="lazy" class="responsive-img">
                     </div>
                     <h3>Emergency & Electrical Service</h3>
                 </div>
                 <div class="service-card">
                     <div class="service-card-image">
-                        <img src="/images/placeholder-1.jpg" alt="Home Wiring Installation & Care">
+                        <img src="/images/placeholder-1.jpg" alt="Home Wiring Installation & Care" loading="lazy" class="responsive-img">
                     </div>
                     <h3>Home Wiring Installation & Care</h3>
                 </div>
                 <div class="service-card">
                     <div class="service-card-image">
-                        <img src="/images/placeholder-1.jpg" alt="Clean Energy Installations">
+                        <img src="/images/placeholder-1.jpg" alt="Clean Energy Installations"   loading="lazy" class="responsive-img">
                     </div>
                     <h3>Clean Energy Installations</h3>
                 </div>
                 <div class="service-card">
                     <div class="service-card-image">
-                        <img src="/images/placeholder-1.jpg" alt="Residential Upgrades & Renovations">
+                        <img src="/images/placeholder-1.jpg" alt="Residential Upgrades & Renovations" loading="lazy" class="responsive-img">
                     </div>
                     <h3>Residential Upgrades & Renovations</h3>
                 </div>
@@ -214,20 +216,31 @@
             <div class="projects-grid">
                 <div class="project-item">
                     <div class="project-item">
-                        <video src="path/to/project1.mp4" alt="Project 1 Description" controls></video>
-
+                        <video controls width="100%" height="auto" preload="metadata">
+                            <source src="videos/sample-video.mp4" type="video/mp4" alt="Project Video 1">
+                            <track src="videos/sample-video.vtt" kind="captions" srclang="en" label="English">
+                            Your browser does not support the video tag.
+                        </video>
                     </div>
                     <p>Project 1 Caption: Brief description of the project.</p>
                 </div>
                 <div class="project-item">
                     <div class="project-item">
-                        <video src="path/to/project1.mp4" alt="Project 1 Description" controls></video>
+                        <video controls width="100%" height="auto" preload="metadata">
+                            <source src="videos/sample-video.mp4" type="video/mp4" alt="Project Video 1">
+                            <track src="videos/sample-video.vtt" kind="captions" srclang="en" label="English">
+                            Your browser does not support the video tag.
+                        </video>
                     </div>
                     <p>Project 2 Caption: Brief description of the project.</p>
                 </div>
                 <div class="project-item">
                     <div class="project-item">
-                        <video src="path/to/project1.mp4" alt="Project 1 Description" controls></video>
+                        <video controls width="100%" height="auto" preload="metadata">
+                            <source src="videos/sample-video.mp4" type="video/mp4" alt="Project Video 1">
+                            <track src="videos/sample-video.vtt" kind="captions" srclang="en" label="English">
+                            Your browser does not support the video tag.
+                        </video>
                     </div>
                     <p>Project 3 Caption: Brief description of the project.</p>
                 </div>
@@ -245,9 +258,9 @@
             <h2 class="section-title">Project Gallery</h2>
             <div class="underline"></div>
             <div class="project-gallery-slider">
-                <div><img src="images/placeholder-1.jpg" alt="Image 1"></div>
-                <div><img src="images/placeholder-1.jpg" alt="Image 2"></div>
-                <div><img src="images/placeholder-1.jpg" alt="Image 3"></div>
+                <div><img src="images/placeholder-1.jpg" alt="Image 1" loading="lazy" class="responsive-img"></div>
+                <div><img src="images/placeholder-1.jpg" alt="Image 2" loading="lazy" class="responsive-img"></div>
+                <div><img src="images/placeholder-1.jpg" alt="Image 3" loading="lazy" class="responsive-img"></div>
             </div>
             <div class="hero-buttons">
                 <a href="tel:404-939-0629" class="call-btn">CALL NOW</a>
@@ -270,7 +283,7 @@
                     </div>
                 </div>
                 <div class="image-content">
-                    <img src="images/placeholder-1.jpg" alt="Placeholder Image">
+                    <img src="images/placeholder-1.jpg" alt="Placeholder Image" loading="lazy" class="responsive-img">
                 </div>
             </div>
         </section>
@@ -279,7 +292,7 @@
 <section class="cta-section">
     <div class="container">
         <div class="image-content">
-            <img src="images/placeholder-1.jpg" alt="Placeholder Image">
+            <img src="images/placeholder-1.jpg" alt="Placeholder Image" loading="lazy" class="responsive-img">
         </div>
         <div class="text-content">
             <h2>Ready to Schedule a Visit?</h2>
@@ -304,7 +317,7 @@
         <div class="container">
             <div class="footer-column">
                 <div class="footer-logo">
-                    <img src="images/Pristine_Electricians.png" alt="Pristine Electrical Logo">
+                    <img src="images/Pristine_Electricians.png" alt="Pristine Electrical Logo" loading="lazy" class="responsive-img">
                 </div>
             </div>
             <div class="footer-column">
@@ -320,7 +333,7 @@
                 <p>Quincy Jackson</p>
                 <p><a href="tel:123-456-7890">404-939-0629</a></p>
                 <p><a href="mailto:info@pristine.com">info@pristine.com</a></p>
-                <p><a href="https://www.instagram.com/pristine" target="_blank"><img src="images/instagram-icon.png" alt="Instagram"></a></p>
+                <p><a href="https://www.instagram.com/pristine" target="_blank"></a></p>
             </div>
             <div class="footer-column">
                 <h3>From Light Bulbs to Home Wiring, We Make it Easy.</h3>
