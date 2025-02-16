@@ -20,20 +20,43 @@ const pool = mysql.createPool({
 });
 
 app.post('/submit-form', async (req, res) => {
-  const { name, email } = req.body;
+  const {
+    firstName = null,
+    lastName = null,
+    phone = null,
+    email = null,
+    address = null,
+    newCustomer = null,
+    helpDescription = null,
+  } = req.body;
 
-  // Insert into MySQL
-  const query = 'INSERT INTO users (name, email) VALUES (?, ?)';
-  pool.query(query, [name, email], async (err, results) => {
-    if (err) {
-      console.error('Error inserting into MySQL:', err);
-      return res.status(500).send('An error occurred.');
+  const query = `
+    INSERT INTO users (firstName, lastName, phone, email, address, newCustomer, helpDescription)
+    VALUES (?, ?, ?, ?, ?, ?, ?)
+  `;
+
+  pool.query(
+    query,
+    [firstName, lastName, phone, email, address, newCustomer, helpDescription],
+    async (err, results) => {
+      if (err) {
+        console.error('Error inserting into MySQL:', err);
+        return res.status(500).send('An error occurred.');
+      }
+
+      await saveToGoogleSheets({
+        firstName,
+        lastName,
+        phone,
+        email,
+        address,
+        newCustomer,
+        helpDescription,
+      });
+
+      res.send('Form submitted successfully!');
     }
-
-    // Insert into Google Sheets
-    await saveToGoogleSheets(name, email);
-    res.send('Form submitted successfully!');
-  });
+  );
 });
 
 app.listen(port, () => {

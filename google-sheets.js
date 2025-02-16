@@ -3,7 +3,6 @@ const dotenv = require('dotenv');
 
 dotenv.config();
 
-// Google Sheets Setup
 const auth = new google.auth.GoogleAuth({
   keyFile: 'google-credentials.json',
   scopes: ['https://www.googleapis.com/auth/spreadsheets'],
@@ -11,17 +10,37 @@ const auth = new google.auth.GoogleAuth({
 
 const sheets = google.sheets({ version: 'v4', auth });
 
-async function saveToGoogleSheets(name, email) {
-  try {
+async function saveToGoogleSheets(formData) {
+    try {
+      const {
+        firstName = "",
+        lastName = "",
+        phone = "",
+        email = "",
+        address = "",
+        newCustomer = "",
+        helpDescription = "",
+      } = formData;
+
     const spreadsheetId = '1YNH8dZ7Fj1yNcjEs9-yAripLpq7QYIRpgtW7RUns2pk';
-    const range = 'Sheet1!A:B';
+    const range = 'Sheet1!A:G';
 
     await sheets.spreadsheets.values.append({
       spreadsheetId,
       range,
       valueInputOption: 'USER_ENTERED',
       requestBody: {
-        values: [[name, email]],
+        values: [
+          [
+            firstName,
+            lastName,
+            phone,
+            email,
+            address,
+            newCustomer,
+            helpDescription,
+          ],
+        ],
       },
     });
 
@@ -32,3 +51,4 @@ async function saveToGoogleSheets(name, email) {
 }
 
 module.exports = saveToGoogleSheets;
+
