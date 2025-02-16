@@ -9,7 +9,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $helpDescription = htmlspecialchars($_POST['helpDescription']);
 
     // Send email
-    $to = "your-email@example.com";
+    $to = "your-email@example.com"; // Replace with your email address
     $subject = "New Contact Us Form Submission";
     $message = "First Name: $firstName\nLast Name: $lastName\nPhone: $phone\nEmail: $email\nAddress: $address\nNew Customer: $newCustomer\nHow can we help you?: $helpDescription";
     $headers = "From: $email";

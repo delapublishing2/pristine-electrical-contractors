@@ -1,3 +1,5 @@
+
+
 $(document).ready(function(){
     $('.project-gallery-slider').slick({
         slidesToShow: 1,

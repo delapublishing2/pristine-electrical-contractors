@@ -27,6 +27,9 @@ header {
     align-items: center;
     padding: 2rem 2rem;
     font-family: 'Roboto', sans-serif; /* Added new font */
+    position: sticky; /* Make header sticky */
+    top: 0; /* Stick to the top */
+    z-index: 1000; /* Ensure header is above other content */
 }
 
 .logo-container {
@@ -50,7 +53,21 @@ header {
     font-size: 1.1rem; /* Increased font size */
 }
 
-/*contact Info Styles */
+/* Hamburger Menu Styles */
+.hamburger-menu {
+    display: none; /* Hide hamburger menu by default */
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger-menu div {
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+    margin: 4px 0;
+}
+
+/* Contact Info Styles */
 .contact-info {
     display: flex;
     flex-direction: column;
@@ -66,7 +83,6 @@ header {
 }
 
 /* Button Styles */
-
 .schedule-btn {
     background: linear-gradient(to right, #ffed59, #FF914D);
     color: #333;
@@ -90,6 +106,7 @@ header {
     }
 
     .nav-menu {
+        display: none; /* Hide navigation menu on smaller screens */
         flex-direction: column;
         align-items: flex-start;
         width: 100%;
@@ -114,9 +131,46 @@ header {
     }
 
     .schedule-btn {
-        width: 100%; /* Make button full width */
+        width: 50%; /* Make button full width */
         text-align: center; /* Center text within button */
         margin-top: 1rem; /* Add margin above button */
+    }
+
+    .hamburger-menu {
+        display: flex; /* Show hamburger menu on smaller screens */
+    }
+}
+
+/* Show Navigation Menu when Hamburger Menu is Clicked */
+/* Hamburger Menu Styles */
+.hamburger-menu {
+    display: none; /* Hide hamburger menu by default */
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger-menu div {
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+    margin: 4px 0;
+}
+
+/* Media Query for Responsiveness */
+@media (max-width: 768px) {
+    .nav-menu {
+        display: none; /* Hide navigation menu on smaller screens */
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+    }
+
+    .hamburger-menu {
+        display: flex; /* Show hamburger menu on smaller screens */
+    }
+
+    .nav-menu.active {
+        display: flex; /* Show navigation menu when active */
     }
 }
 
