@@ -59,21 +59,46 @@ app.post('/submit-form', async (req, res) => {
         from: process.env.EMAIL_USER, // Sender address
         to: email, // Recipient address (the form submitter)
         subject: 'Form Submission Confirmation',
-        text: `
-          Dear ${firstName} ${lastName},
-
-          Thank you for your submission. Someone will be with you shortly. 
-          Here is a summary of your submission:
-
-          Name: ${firstName} ${lastName}
-          Phone: ${phone || 'Not provided'}
-          Email: ${email}
-          Address: ${address || 'Not provided'}
-          Are you a new customer? ${newCustomer || 'Not specified'}
-          How can we help you? ${helpDescription || 'No description provided'}
-
-          Best regards,
-          Pristine Electrical Contractors
+        html: `
+          <html>
+            <body>
+              <h1 style="color: #4CAF50;">Form Submission Confirmation</h1>
+              <p>Dear <strong>${firstName} ${lastName}</strong>,</p>
+              <p>Thank you for your submission. Someone will be with you shortly.</p>
+              
+              <h2>Here is a summary of your submission:</h2>
+              
+              <table style="border-collapse: collapse; width: 100%; max-width: 600px;">
+                <tr>
+                  <td style="padding: 8px; border: 1px solid #ddd; font-weight: bold;">Name</td>
+                  <td style="padding: 8px; border: 1px solid #ddd;">${firstName} ${lastName}</td>
+                </tr>
+                <tr>
+                  <td style="padding: 8px; border: 1px solid #ddd; font-weight: bold;">Phone</td>
+                  <td style="padding: 8px; border: 1px solid #ddd;">${phone || 'Not provided'}</td>
+                </tr>
+                <tr>
+                  <td style="padding: 8px; border: 1px solid #ddd; font-weight: bold;">Email</td>
+                  <td style="padding: 8px; border: 1px solid #ddd;">${email}</td>
+                </tr>
+                <tr>
+                  <td style="padding: 8px; border: 1px solid #ddd; font-weight: bold;">Address</td>
+                  <td style="padding: 8px; border: 1px solid #ddd;">${address || 'Not provided'}</td>
+                </tr>
+                <tr>
+                  <td style="padding: 8px; border: 1px solid #ddd; font-weight: bold;">Are you a new customer?</td>
+                  <td style="padding: 8px; border: 1px solid #ddd;">${newCustomer || 'Not specified'}</td>
+                </tr>
+                <tr>
+                  <td style="padding: 8px; border: 1px solid #ddd; font-weight: bold;">How can we help you?</td>
+                  <td style="padding: 8px; border: 1px solid #ddd;">${helpDescription || 'No description provided'}</td>
+                </tr>
+              </table>
+              
+              <br>
+              <p>Best regards,<br>Pristine Electrical Contractors</p>
+            </body>
+          </html>
         `,
       };
 
