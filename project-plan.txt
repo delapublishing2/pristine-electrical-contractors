@@ -871,3 +871,40 @@ We can now move onto setting up the project and development environment, with a 
 We will create our HTML skeleton, implement styles and content using all of the elements previously discussed.
 
 We can also finalize the style guide with specific font sizes, and other spacing guidelines.
+
+
+Images used:
+<a href="https://www.flaticon.com/free-icons/gear" title="gear icons">Gear icons created by Dave Gandy - Flaticon</a>
+
+<a href="https://www.flaticon.com/free-icons/home-button" title="home button icons">Home button icons created by Freepik - Flaticon</a>
+
+Emergency Icon
+<a href="https://www.flaticon.com/free-icons/emergency" title="emergency icons">Emergency icons created by meaicon - Flaticon</a>
+
+Home Wiring:
+
+<a href="https://www.flaticon.com/free-icons/barbed-wire" title="barbed wire icons">Barbed wire icons created by Dmytro Vyshnevskyi - Flaticon</a>
+
+Clean energy:
+
+<a href="https://www.flaticon.com/free-icons/energy" title="energy icons">Energy icons created by nawicon - Flaticon</a>
+
+Upgrades:
+
+<a href="https://www.flaticon.com/free-icons/up-arrow" title="up arrow icons">Up arrow icons created by Pixel perfect - Flaticon</a>
+
+
+Commercial Services
+
+Code regulations: <a href="https://www.flaticon.com/free-icons/clipboard" title="clipboard icons">Clipboard icons created by Kiranshastry - Flaticon</a>
+
+Refurbishment 
+
+<a href="https://www.flaticon.com/free-icons/refurbishment" title="refurbishment icons">Refurbishment icons created by Vectors Tank - Flaticon</a>
+Insustrial
+
+<a href="https://www.flaticon.com/free-icons/industry" title="industry icons">Industry icons created by Freepik - Flaticon</a>
+
+Installations
+
+<a href="https://www.flaticon.com/free-icons/installation" title="installation icons">Installation icons created by Freepik - Flaticon</a>

@@ -47,43 +47,69 @@
     <!-- Hero Section End -->
 
 
-          <!-- Contact Us Section Start -->
-          <section class="contact-us-section">
-            <div class="container">
-                <div class="form-content">
-                    <h1>Contact Us Today!</h1>
-                    <div class="underline"></div> <!-- Yellow underline -->
-                    <p>We are committed to providing the best solutions for your electrical needs. Contact us for an estimate or any inquiries.</p>
-                    <form id="contactForm">
-                        <input type="text" name="firstName" placeholder="First Name" required>
-                        <input type="text" name="lastName" placeholder="Last Name" required>
-                        <input type="tel" name="phone" placeholder="Phone">
-                        <input type="email" name="email" placeholder="Email" required>
-                        <input type="text" name="address" placeholder="Address">
-                        <label>Are you a new customer?</label>
-                        <select name="newCustomer">
-                          <option value="yes">Yes</option>
-                          <option value="no">No</option>
+    <section class="contact-us-section">
+        <div class="container">
+            <div class="form-content">
+                <h1>Contact Us Today!</h1>
+                <div class="underline"></div>
+                <p>We are committed to providing the best solutions for your electrical needs. Contact us for an estimate or any inquiries.</p>
+                
+                <form id="contactForm">
+                    <div class="form-group">
+                        <input type="text" name="firstName" placeholder="First Name" required aria-label="First Name">
+                        <input type="text" name="lastName" placeholder="Last Name" required aria-label="Last Name">
+                    </div>
+                    
+                    <div class="form-group">
+                        <input type="tel" name="phone" placeholder="Phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" aria-label="Phone Number">
+                    </div>
+                    
+                    <div class="form-group">
+                        <input type="email" name="email" placeholder="Email" required aria-label="Email Address">
+                    </div>
+                    
+                    <div class="form-group">
+                        <input type="text" name="address" placeholder="Address" aria-label="Address">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="newCustomer">Are you a new customer?</label>
+                        <select name="newCustomer" id="newCustomer" aria-label="New Customer Status">
+                            <option value="yes">Yes</option>
+                            <option value="no">No</option>
                         </select>
-                        <textarea name="helpDescription" placeholder="How can we help you?" required></textarea>
-                        <button type="submit">Send Message</button>
-                      </form>                      
-                </div>
-                <div class="contact-info">
-                    <h2>You can reach us at:</h2>
-                    <p><a href="tel:404-939-0629">404-939-0629</a></p>
-                    <div class="map">
-                        <iframe
+                    </div>
+                    
+                    <div class="form-group">
+                        <textarea name="helpDescription" placeholder="How can we help you?" required aria-label="How can we help you?"></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <button type="submit" class="submit-btn">SEND MESSAGE</button>
+                    </div>
+                    
+                    <p class="privacy-notice">
+                        By submitting this form, you agree to our <a href="/privacy-policy">Privacy Policy</a>.
+                    </p>
+                </form>
+            </div>
+            
+            <div class="contact-info-content">
+                <h2>You can reach us at:</h2>
+                <p><a href="tel:404-939-0629" class="phone-link">404-939-0629</a></p>
+                <div class="map">
+                    <iframe
                         width="100%"
                         height="450"
-                        frameborder="0" style="border:0"
-                        src="https://www.google.com/maps/embed/v1/place?key=YOUR_API_KEY&q=Pristine+Electrical+Contractors,Georgia" allowfullscreen>
+                        loading="lazy"
+                        src="https://www.google.com/maps/embed/v1/place?key=YOUR_API_KEY&q=Pristine+Electrical+Contractors,Georgia"
+                        title="Pristine Electrical Contractors Location"
+                        allowfullscreen>
                     </iframe>
-                    </div>
                 </div>
             </div>
-        </section>
-        <!-- Contact Us Section End -->
+        </div>
+    </section>
 
         <!-- Signs to Call Section Start -->
 
@@ -112,47 +138,47 @@
     <!-- Signs To Call Content End-->
 
       <!-- Residential Services Offered By Pristine Section Start -->
-      <section class="residential-services-section">
-        <h2 class="section-title">Why You Should Choose Us</h2>
-        <div class="feature-cards-grid">
-            <div class="service-card">
-                <div class="service-card-image">
-                    <img src="/images/placeholder-1.jpg" alt="Emergency & Electrical Service" loading="lazy" class="responsive-img">
-                </div>
-                <h3>New Construction Wiring</h3>
-                <p>We are reliable and will do big and small jobs for reasonable and affordable prices.</p>
+ <section class="residential-services-section">
+    <h2 class="section-title">Why You Should Choose Us</h2>
+    <div class="feature-cards-grid">
+        <div class="service-card">
+            <div class="service-card-image">
+                <img src="/images/tools.png" alt="Emergency & Electrical Service" loading="lazy" class="responsive-img icon-image-dark">
             </div>
-            <div class="service-card">
-                <div class="service-card-image">
-                    <img src="/images/placeholder-1.jpg" alt="Home Wiring Installation & Care" loading="lazy" class="responsive-img">
-                </div>
-                <h3>Home Maintinence</h3>
-                <p>We get to the root issue and don't put a bandaid on it.</p>
-            </div>
-            <div class="service-card">
-                <div class="service-card-image">
-                    <img src="/images/placeholder-1.jpg" alt="Clean Energy Installations" loading="lazy" class="responsive-img">
-                </div>
-                <h3>Electrical Inspections</h3>
-                <p>We help you stay up to date on your electrical components,
-                    appliances, & systems.</p>
-            </div>
-            <div class="service-card">
-                <div class="service-card-image">
-                    <img src="/images/placeholder-1.jpg" alt="Residential Upgrades & Renovations" loading="lazy" class="responsive-img">
-                </div>
-                <h3>Emergency Care</h3>
-                <p> We offer residential and commercial service, maintenance, and emergency repair.</p>
-            </div>
+            <h3>Reliable</h3>
+            <p>We are reliable and will do big and small jobs for reasonable and affordable prices.</p>
         </div>
-        
-         <div class="hero-buttons">  <!-- Reusing hero-buttons for consistent button styling -->
-            <a href="tel:404-939-0629" class="call-btn">CALL NOW</a>
-            <a href="contact-us.html" class="schedule-btn">SCHEDULE NOW</a>
+        <div class="service-card">
+            <div class="service-card-image">
+                <img src="/images/clipboard.png" alt="Home Wiring Installation & Care" loading="lazy" class="responsive-img icon-image-dark">
+            </div>
+            <h3>Committed</h3>
+            <p>We get to the root issue and don't put a bandaid on it.</p>
         </div>
-        
-    </section>
-    <!-- Residential Services Offered By Pristine Section End -->
+        <div class="service-card">
+            <div class="service-card-image">
+                <img src="/images/flash.png" alt="Clean Energy Installations" loading="lazy" class="responsive-img icon-image-dark">
+            </div>
+            <h3>Timely</h3>
+            <p>We help you stay up to date on your electrical components,
+                appliances, & systems.</p>
+        </div>
+        <div class="service-card">
+            <div class="service-card-image">
+                <img src="/images/settings.png" alt="Residential Upgrades & Renovations" loading="lazy" class="responsive-img icon-image-dark">
+            </div>
+            <h3>Versatile</h3>
+            <p> We offer residential and commercial service, maintenance, and emergency repair.</p>
+        </div>
+    </div>
+    
+     <div class="hero-buttons">  <!-- Reusing hero-buttons for consistent button styling -->
+        <a href="tel:404-939-0629" class="call-btn">CALL NOW</a>
+        <a href="contact-us.html" class="schedule-btn">SCHEDULE NOW</a>
+    </div>
+    
+</section>
+<!-- Residential Services Offered By Pristine Section End -->
 
     <!-- What Drives Us -->
 <section class="why-choose-us-section">
@@ -169,7 +195,7 @@
         </div>
     </div>
     <div class="section-image">
-        <img src="images/placeholder-1.jpg" alt="Placeholder Image">
+        <img src="/images/james-hon-gOUh_TsI4Dk-unsplash.jpg" alt= "Placeholder Image" loading="lazy" class="responsive-img">
     </div>
 </section>
 <!-- What Drives Us End -->
