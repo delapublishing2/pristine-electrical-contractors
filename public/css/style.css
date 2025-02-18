@@ -251,26 +251,154 @@ header {
     line-height: 1.6;
 }
 
-/* Reusing Hero Buttons Styles - No need to redefine, just ensure correct class names in HTML */
-.hero-buttons { /* Ensure buttons are aligned left within text content */
-    text-align: center; /* Align buttons to the left within their container */ /* ADDED THIS LINE */
-    margin-top: 1rem; /* Add margin above buttons to separate from text */
-    position: relative; /* Position buttons in front of overlay */
-    z-index: 2; /* Ensure buttons are on top of overlay */
+/* Button Styles */
+.hero-buttons {
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 2rem;
+    position: relative;
+    z-index: 2;
+    justify-content: center;
 }
 
-.hero-buttons a { /* Style for buttons in hero section */ /* UPDATED SELECTOR */
+.hero-buttons a {
     display: inline-block;
     padding: 1rem 2rem;
     border-radius: 5px;
     text-decoration: none;
-    color: white;
+    color: #384B68;
     font-weight: bold;
-    background: linear-gradient(to right, #a9cbe8, #9ccef5);
-    margin-right: 10px;
+    min-width: 200px;
+    text-align: center;
     position: relative;
-    z-index: 2;
+    overflow: hidden;
+    transition: transform 0.3s ease;
 }
+
+/* Call Button Style */
+.hero-buttons .call-btn {
+    background: linear-gradient(to right, #ffed59, #FF914D);
+}
+
+/* Schedule Button Style */
+.hero-buttons .schedule-btn {
+    background: linear-gradient(to right, #a9cbe8, #9ccef5);
+}
+/* Button Electric Spark Effect */
+.hero-buttons a {
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.hero-buttons a::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 5px;
+    height: 5px;
+    background: rgba(255, 255, 255, 0.8);
+    opacity: 0;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 0.5s;
+}
+
+.hero-buttons a:hover::before {
+    animation: spark 0.8s ease-out;
+}
+
+@keyframes spark {
+    0% {
+        opacity: 1;
+        width: 5px;
+        height: 5px;
+    }
+    50% {
+        opacity: 0.5;
+        width: 50px;
+        height: 50px;
+    }
+    100% {
+        opacity: 0;
+        width: 200px;
+        height: 200px;
+    }
+}
+
+/* Additional spark particles */
+.hero-buttons a::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 3px;
+    height: 3px;
+    background: rgba(250, 239, 165, 0.908);
+    opacity: 0;
+    border-radius: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.hero-buttons a:hover::after {
+    animation: sparkParticles 0.6s ease-out 0.1s;
+}
+
+@keyframes sparkParticles {
+    0% {
+        opacity: 1;
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    100% {
+        opacity: 0;
+        transform: translate(-200%, -50%) rotate(180deg) scale(4);
+    }
+}
+/* Media Query for Mobile Devices */
+@media (max-width: 768px) {
+    .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        gap: 1.5rem; /* Consistent gap for vertical stacking */
+    }
+
+    .hero-buttons a {
+        width: 80%;
+        margin: 0; /* Remove any inherited margins */
+        background: linear-gradient(to right, #a9cbe8, #9ccef5);
+    }
+
+    /* Reset section-specific button styles on mobile */
+    .cta-section .hero-buttons,
+    .need-more-info-section .hero-buttons,
+    .our-projects-section .hero-buttons,
+    .project-gallery-section .hero-buttons {
+        text-align: center;
+        margin-top: 2rem;
+    }
+
+    .cta-section .hero-buttons a,
+    .need-more-info-section .hero-buttons a,
+    .our-projects-section .hero-buttons a,
+    .project-gallery-section .hero-buttons a {
+        width: 80%;
+        margin: 0;
+        padding: 1rem;
+    }
+}
+
+/* Remove any conflicting styles */
+.hero-buttons a,
+.cta-section .hero-buttons a,
+.need-more-info-section .hero-buttons a,
+.our-projects-section .hero-buttons a,
+.project-gallery-section .hero-buttons a {
+    margin: 0;
+    color: #384B68;
+}
+
 
 .hero-buttons .call-btn { /* Style for call button */
     background:  linear-gradient(to right, #ffed59, #FF914D);
@@ -520,11 +648,7 @@ header {
     }
 }
 
-.why-entrust-us-section .hero-buttons { /* Reusing hero buttons for consistency */
-    margin-top: 2rem; /* Spacing above buttons */
-    text-align: center; /* Center buttons within container */
-    
-}
+
 
 /* Why You Should Entrust Us With Your Home or Business Section Styles End */
 
@@ -548,6 +672,7 @@ header {
     font-size: 2.5rem; /* Section heading size */
     font-weight: bold;
     margin-bottom: 1rem;
+    color: #a9cbe8;
 }
 
 .efficient-reliable-section .underline { /* Reusing underline class for yellow line */
@@ -585,11 +710,6 @@ header {
     margin-bottom: 2rem; /* Spacing below "And Much More" */
 }
 
-
-.efficient-reliable-section .hero-buttons { /* Center buttons in this section */ /* NEW SELECTOR FOR THIS SECTION'S BUTTONS */
-    text-align: center; /* Center buttons */
-    margin-top: 2rem; /* Spacing above buttons */
-}
 
 /* Efficient & Reliable Service Section Styles End */
 
@@ -833,19 +953,6 @@ header {
     color: #555;
 }
 
-.our-projects-section .hero-buttons {
-    text-align: center;
-}
-
-.our-projects-section .hero-buttons a {
-    display: inline-block;
-    padding: 1rem 2rem;
-    border-radius: 5px;
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
-    margin: 0 1rem;
-}
 
 
 
@@ -975,19 +1082,6 @@ header {
     border-radius: 10px;
 }
 
-.project-gallery-section .hero-buttons {
-    text-align: center;
-}
-
-.project-gallery-section .hero-buttons a {
-    display: inline-block;
-    padding: 1rem 2rem;
-    border-radius: 5px;
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
-    margin: 0 1rem;
-}
 
 /* Responsive Styles */
 @media (max-width: 768px) {
@@ -1046,19 +1140,6 @@ header {
     text-align: left;
 }
 
-.need-more-info-section .hero-buttons {
-    text-align: left;
-}
-
-.need-more-info-section .hero-buttons a {
-    display: inline-block;
-    padding: 1rem 2rem;
-    border-radius: 5px;
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
-    margin: 0 1rem;
-}
 
 .need-more-info-section .image-content {
     flex: 1;
@@ -1084,8 +1165,7 @@ header {
     }
 
     .need-more-info-section h2,
-    .need-more-info-section p,
-    .need-more-info-section .hero-buttons {
+    .need-more-info-section p {
         text-align: center;
     }
 
@@ -1151,19 +1231,9 @@ header {
     text-align: left;
 }
 
-.cta-section .hero-buttons {
-    text-align: left;
-}
 
-.cta-section .hero-buttons a {
-    display: inline-block;
-    padding: 1rem 2rem;
-    border-radius: 5px;
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
-    margin: 0 1rem;
-}
+
+
 
 
 /* Media Query for Responsiveness */
@@ -1179,8 +1249,7 @@ header {
     }
 
     .cta-section h2,
-    .cta-section p,
-    .cta-section .hero-buttons {
+    .cta-section p {
         text-align: center;
     }
 
@@ -1230,6 +1299,26 @@ header {
     margin-bottom: 2rem; /* Spacing between columns */
 }
 
+/* Update Footer References Styles */
+.footer-column .references {
+    margin-top: 1rem;
+}
+
+.footer-column .references p {
+    font-size: 0.75rem; /* Smaller font size for references */
+    margin-bottom: 0.25rem;
+    color: rgba(255, 255, 255, 0.7); /* Slightly transparent white */
+    line-height: 1.2;
+}
+
+.footer-column .references a {
+    font-size: 0.75rem;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.footer-column .references a:hover {
+    color: #9ccef5;
+}
 .footer-logo img {
     max-width: 250px; /* Limit logo size */
     margin-bottom: 1rem; /* Spacing below logo */
@@ -1661,6 +1750,12 @@ video {
     .footer-column {
         width: 100%;
         margin-bottom: 2rem;
+    }
+
+    /* Why Choose Us Section Adjustment */
+
+    .why-choose-us-section h2 {
+        text-align: center;
     }
 }
 
