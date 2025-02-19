@@ -200,7 +200,7 @@ header {
     align-items: flex-start; /* Align items to the start (left) */
     gap: 2rem;
     /* Background Image Implementation */
-    background-image: url('../images/Hero-electric-4198293_1280.jpg');
+    background-image: url('../images/Hero-electric-4198293_1280 copy.jpg'); /* Default hero image */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -455,24 +455,13 @@ header {
         margin-bottom: 1rem;
     }
 
-    /* Optimize background image for mobile */
-    .hero-section {
-        background-image: url('../images/placeholder-1.jpg'); /* Mobile-optimized image */
-        background-position: center 20%; /* Adjust focal point */
-    }
-
     /* Increase overlay opacity for better readability on mobile */
     .hero-section::before {
         background-color: rgba(0, 0, 0, 0.6);
     }
 }
 
-/* Ensure proper loading of background images */
-@media (min-width: 769px) {
-    .hero-section {
-        background-image: url('../images/placeholder-1.jpg');
-    }
-}
+
 /*Hero Section Styles End */
 
 /* Why Choose Us Section Styles */
@@ -669,10 +658,10 @@ header {
     margin: auto;
 }
 .efficient-reliable-section h2 {
-    font-size: 2.5rem; /* Section heading size */
+    font-size: 2rem; /* Section heading size */
     font-weight: bold;
     margin-bottom: 1rem;
-    color: #a9cbe8;
+    color: #fff;
 }
 
 .efficient-reliable-section .underline { /* Reusing underline class for yellow line */
@@ -1268,8 +1257,8 @@ header {
     margin: 0.5rem 0 1rem 0; /* Remove auto to align left */
 }
 
-.hero-section .why-us-hero {
-    background-image: url('/images/pexels-szaboviktor-3220994.jpg');
+.hero-section.why-us-hero {
+    background-image: url('../images/pexels-jopwell-1325725.jpg');
 }
 
 /* Why Us Section Styles End*/
@@ -1501,10 +1490,9 @@ header {
 /* Contact Info Styles */
 .contact-info-content {
     flex: 2; /* Takes up 40% of the container */
-    background: linear-gradient(to bottom, #79A2D1, #384B68);
     padding: 2rem;
     border-radius: 10px;
-    color: white;
+    color: #384B68;
 }
 
 .contact-info-content h2 {
@@ -1513,7 +1501,7 @@ header {
 }
 
 .contact-info-content a[href^="tel"] {
-    color: #fff;
+    color: #384B68;
     font-size: 1.5rem;
     text-decoration: none;
     display: block;
