@@ -17,7 +17,7 @@ const transporter = nodemailer.createTransport({
 });
 
 const app = express();
-const port = 3000;
+const port = 3306;
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
@@ -26,7 +26,15 @@ app.use(express.static('public'));
 const pool = mysql.createPool({
   host: process.env.DB_HOST,
   user: process.env.DB_USER,
+  password: process.env.DB_PASS,
   database: process.env.DB_NAME,
+  port: 3306,
+  connectTimeout: 1000, // Increase timeout (10 seconds)
+  waitForConnections: true,
+  connectionLimit: 10,
+  queueLimit: 0,
+  enableKeepAlive: true,
+  keepAliveInitialDelay: 0
 });
 
 app.post('/submit-form', async (req, res) => {
@@ -53,6 +61,7 @@ app.post('/submit-form', async (req, res) => {
         console.error('Error inserting into MySQL:', err);
         return res.status(500).send('An error occurred.');
       }
+
 
       // Prepare the email content
       const mailOptions = {
