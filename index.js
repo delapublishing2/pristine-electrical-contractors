@@ -1,6 +1,6 @@
+const dotenv = require('dotenv');
 const express = require('express');
 const mysql = require('mysql2');
-const dotenv = require('dotenv');
 const bodyParser = require('body-parser');
 const saveToGoogleSheets = require('./google-sheets');
 const nodemailer = require('nodemailer'); // <-- Add this line
@@ -29,7 +29,7 @@ const pool = mysql.createPool({
   password: process.env.DB_PASS,
   database: process.env.DB_NAME,
   port: 3306,
-  connectTimeout: 1000, // Increase timeout (10 seconds)
+  connectTimeout: 50000, // Increase timeout (10 seconds)
   waitForConnections: true,
   connectionLimit: 10,
   queueLimit: 0,
@@ -134,6 +134,12 @@ app.post('/submit-form', async (req, res) => {
     }
   );
 });
+
+console.log(process.env.DB_HOST);
+console.log(process.env.DB_USER);
+console.log(process.env.DB_PASS);
+console.log(process.env.DB_NAME);
+
 
 app.listen(port, () => {
   console.log(`Server running on http://localhost:${port}`);
