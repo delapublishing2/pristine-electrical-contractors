@@ -1,4 +1,28 @@
+# Logs
+logs
+*.log
+npm-debug.log*
 
+# Dependency directories
 node_modules/
+
+# Environment variables
 .env
+
+# Credentials
 google-credentials.json
+
+# VS Code settings
+.vscode/
+
+# Build output
+dist/
+build/
+
+# Temporary files
+*.tmp
+*.temp
+
+# OS generated files
+.DS_Store
+Thumbs.db
