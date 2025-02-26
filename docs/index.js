@@ -2,7 +2,7 @@ const dotenv = require('dotenv');
 const express = require('express');
 const mysql = require('mysql2');
 const bodyParser = require('body-parser');
-const saveToGoogleSheets = require('./google-sheets');
+const saveToGoogleSheets = require('../google-sheets');
 const nodemailer = require('nodemailer'); // <-- Add this line
 
 dotenv.config();
@@ -71,7 +71,7 @@ app.post('/submit-form', async (req, res) => {
         html: `
           <html>
             <body>
-              <h1 style="color: #4CAF50;">Form Submission Confirmation</h1>
+              <h1 style="color: #384B68;">Form Submission Confirmation</h1>
               <p>Dear <strong>${firstName} ${lastName}</strong>,</p>
               <p>Thank you for your submission. Someone will be with you shortly.</p>
               
