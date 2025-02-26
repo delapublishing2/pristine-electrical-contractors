@@ -21,7 +21,7 @@ const port = 3306;
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
-app.use(express.static('public'));
+app.use(express.static('docs'));
 
 const pool = mysql.createPool({
   host: process.env.DB_HOST,
