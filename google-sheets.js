@@ -22,7 +22,7 @@ async function saveToGoogleSheets(formData) {
         helpDescription = "",
       } = formData;
 
-    const spreadsheetId = '1YNH8dZ7Fj1yNcjEs9-yAripLpq7QYIRpgtW7RUns2pk';
+    const spreadsheetId = process.env.GOOGLE_SHEET_ID;
     const range = 'Sheet1!A:G';
 
     await sheets.spreadsheets.values.append({

@@ -39,7 +39,7 @@ document.getElementById('contactForm').addEventListener('submit', async function
   });
 
   try {
-    const response = await fetch('/submit-form', {
+    const response = await fetch('/.netlify/functions/submit-form', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(formObject),
@@ -52,4 +52,6 @@ document.getElementById('contactForm').addEventListener('submit', async function
     alert('An error occurred while submitting the form.');
   }
 });
+
+
 
