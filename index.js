@@ -2,7 +2,7 @@ const dotenv = require('dotenv');
 const express = require('express');
 const mysql = require('mysql2');
 const bodyParser = require('body-parser');
-const saveToGoogleSheets = require('../google-sheets');
+const saveToGoogleSheets = require('./google-sheets');
 const nodemailer = require('nodemailer'); // <-- Add this line
 
 dotenv.config();
