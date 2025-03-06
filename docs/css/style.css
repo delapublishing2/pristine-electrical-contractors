@@ -920,6 +920,11 @@ header {
     color: #384B68; /* Dark blue */
 }
 
+.our-projects-section .section-subtitle p {
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+
 .our-projects-section .projects-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
