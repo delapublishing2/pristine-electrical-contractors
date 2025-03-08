@@ -55,7 +55,8 @@
                 <div class="underline"></div>
                 <p>We are committed to providing the best solutions for your electrical needs. Contact us for an estimate or any inquiries.</p>
                 
-                <form id="contactForm">
+                <form id="contactForm" data-netlify="true" method="POST">
+                    <input type="hidden" name="form-name" value="contactForm">
                     <div class="form-group">
                         <input type="text" name="firstName" placeholder="First Name" required aria-label="First Name">
                         <input type="text" name="lastName" placeholder="Last Name" required aria-label="Last Name">
