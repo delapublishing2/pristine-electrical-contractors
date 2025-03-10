@@ -1294,20 +1294,19 @@ header {
 }
 
 /* Update Footer References Styles */
-.footer-column .references {
+.references {
     margin-top: 1rem;
 }
-
-.footer-column .references p {
-    font-size: 0.75rem; /* Smaller font size for references */
+.references p {
+    font-size: 1.5rem; /* Smaller font size for references */
     margin-bottom: 0.25rem;
     color: rgba(255, 255, 255, 0.7); /* Slightly transparent white */
-    line-height: 1.2;
+    line-height: 1.5;
 }
 
-.footer-column .references a {
-    font-size: 0.75rem;
-    color: rgba(255, 255, 255, 0.7);
+.references a {
+    font-size: 1.5rem;
+    color: white;
 }
 
 .footer-column .references a:hover {
