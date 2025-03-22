@@ -50,7 +50,7 @@ header {
 }
 
 .logo-container {
-    font-size: 2.2rem; /* Increased font size */
+    font-size: 1.5rem; /* Increased font size */
     font-weight: bold;
 }
 
@@ -60,7 +60,7 @@ header {
 }
 
 .nav-menu li {
-    margin-left: 2.5rem; /* Increased margin */
+    margin-left: 2rem; /* Increased margin */
 }
 
 .nav-menu a {
