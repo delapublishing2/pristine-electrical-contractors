@@ -83,6 +83,42 @@
                             <option value="no">No</option>
                         </select>
                     </div>
+
+                    <div class="form-group">
+                        <label for="typeService">Type Of Service</label>
+                        <select name="typeService" id="typeService" aria-label="Type of Service">
+                            <option value="residential">Residential</option>
+                            <option value="industrial">Industrial</option>
+                            <option value="commercial">Commercial</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="serviceNeeded">Service Needed</label>
+                        <select name="serviceNeeded" id="serviceNeeded" aria-label="Service Needed" onchange="toggleOtherService(this)">
+                            <option value="residential">New Edition</option>
+                            <option value="industrial">New Builds & Construction</option>
+                            <option value="priceQuote">Price Quote</option>
+                            <option value="renovation">Renovation</option>
+                            <option value="upgrades">Upgrades</option>
+                            <option value="electricalIssues">Electrical Issues</option>
+                            <option value="contractorServices">Contractor Services</option>
+                            <option value="consultation">Consultation</option>
+                            <option value="inspection">Inspection</option> 
+                            <option value="stormDamage">Storm Damage</option> 
+                            <option value="insuranceClaims">Insurance Claims</option> 
+                            <option value="installations">Installations</option> 
+                            <option value="rewiring">Rewiring</option>
+                            <option value="partner">Partner</option>
+                            <option value="questionsConcerns">Questions & Concerns</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+
+                    <!-- Hidden input field for 'Other' service -->
+                    <div class="form-group" id="otherServiceContainer" style="display: none;">
+                        <input type="text" name="otherService" id="otherService" placeholder="Please Specify" aria-label="Other Service">
+                    </div>
                     
                     <div class="form-group">
                         <textarea name="helpDescription" placeholder="How can we help you?" required aria-label="How can we help you?"></textarea>
@@ -182,6 +218,16 @@
                 navMenu.classList.toggle('active');
             });
         });
+    </script>
+    <script>
+        function toggleOtherService(selectElement) {
+            var otherServiceContainer = document.getElementById("otherServiceContainer");
+            if (selectElement.value === "other") {
+                otherServiceContainer.style.display = "block"; 
+            } else {
+                otherServiceContainer.style.display = "none";
+            }
+            }
     </script>
     <script src="js/script.js"></script>
 </body>
